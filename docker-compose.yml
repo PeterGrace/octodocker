@@ -1,0 +1,13 @@
+octoprint:
+  restart: always
+  image: petergrace/octodocker
+  volumes:
+    - /opt/compose/public-grafana/volumes/data:/var/lib/grafana
+    - /opt/compose/public-grafana/volumes/logs:/var/log/grafana
+  devices:
+    - "/dev/ttyUSB0:/dev/ttyUSB0"
+  environment:
+    - OCTOPORT=25500
+  ports:
+    - "25500:25500"
+

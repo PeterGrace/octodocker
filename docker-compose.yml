@@ -3,6 +3,7 @@ octoprint_1:
   image: petergrace/octodocker
   volumes:
     - /root/octodocker/sd4:/home/octoprint
+    - /root/octodocker/uploads:/home/octoprint/.octoprint/uploads
   devices:
     - "/dev/ttyACM0:/dev/ttyUSB0"
   environment:
@@ -15,6 +16,7 @@ octoprint_2:
   image: petergrace/octodocker
   volumes:
     - /root/octodocker/i3pro:/home/octoprint
+    - /root/octodocker/uploads:/home/octoprint/.octoprint/uploads
   devices:
     - "/dev/ttyACM1:/dev/ttyUSB0"
   environment:
